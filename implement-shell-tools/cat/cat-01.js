@@ -18,7 +18,7 @@ for (const file of files) {
   const content = fs.readFileSync(file, "utf-8");
   const lines = content.split("\n");
 
-  // readFileSync agrega un \n final que genera una línea vacía extra
+  // readFileSync adds a trailing \n which creates an extra empty line
   if (lines[lines.length - 1] === "") lines.pop();
 
   for (const line of lines) {
