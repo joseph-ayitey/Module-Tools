@@ -26,10 +26,10 @@ except PermissionError:
     print(f"ls: cannot open directory '{path_arg}': Permission denied")
     exit(1)
 
-# Filter hidden files
+# To filter hidden files
 if not show_hidden:
     contents = [f for f in contents if not f.startswith(".")]
-# If show_hidden is True, keep all files (no filter needed)
+# If show_hidden is True, keep all files (no filter is needed)
 
 contents.sort()
 
